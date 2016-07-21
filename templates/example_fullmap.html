@@ -7,7 +7,6 @@
             <title>Flask Google Maps Full Map Example</title>
     </head>
     <body>
-        <h1>Flask Google Maps Full Map Example</h1>
         <div id="fullmap" style='height:100%;width:100%;top:0;left:0;position:absolute;z-index:200;'>
             {{ fullmap.html }}
 
@@ -116,7 +115,7 @@
                         var json_obj = $.parseJSON(response);//parse JSON
                         options["lat"] = json_obj["lat"];
                         options["lng"] = json_obj["lng"];
-                        options["zoom"] = json_obj["zoom"];
+                        options["zoom"] = 5;
                         options["identifier"] = json_obj["identifier"];
                         updateMap();
                     });
